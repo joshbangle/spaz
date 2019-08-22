@@ -1,1 +1,65 @@
 @import "bootstrap";
+
+body{
+font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  background: image_url('leaves.png')
+}
+.navbar {
+  font-weight: 200;
+  box-shadow: 0px 1px 3px #2a2a2a
+}
+
+.navbar-inverse a.navbar-brand {
+  font-weight: 100;
+  color: white;
+}
+
+.hero {
+  background: image_url('hero.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 370px;
+  box-shadow: 0px 1px 3px #2a2a2a
+}
+
+.frosty {
+  background-image: linear-gradient(to right, transparent, black 600px, transparent 1200px);
+  background-size: 1200px 100%;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  color: #FFFAF0;
+  padding-bottom: 3px;
+}
+
+.frosty h1, .frosty h2, .frosty h3, .frosty h4 {
+    text-shadow: rgba(0,0,0,0.95) 1px 1px;
+}
+
+.landing-button {
+  margin-top: 15px;
+}
+
+.feature {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.new-box {
+  -moz-box-shadow: 2px 2px 3px 0 #d0d0d0;
+  -webkit-box-shadow: 2px 2px 3px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #D3D3D3;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 20px;
+  font-size: 1.2em;
+  overflow: hidden;
+  width: 600px;
+  max-width: 80%;
+  }
