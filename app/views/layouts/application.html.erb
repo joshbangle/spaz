@@ -12,16 +12,19 @@
 
 
   <body>
-
-    <nav class="navbar navbar-toggleable-lg navbar-inverse bg-inverse">
-      <%= link_to root_path do %>
-        <span class="navbar-brand">Spaz</span>
-      <% end %>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
+    <div id="flex-content-container">
+      <nav class="navbar navbar-toggleable-lg navbar-inverse bg-inverse">
+      
+      
+        <button class="navbar-toggler ml-auto logo-box" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+      
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <%= link_to root_path do %>
+        <span class="navbar-brand logo-box">Spaz</span>
+      <% end %>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
           <li class="nav-item">
@@ -30,6 +33,7 @@
 
         
         </ul>
+        <ul class="nav navbar-nav float-lg-right">
         <% if user_signed_in? %>
               <li class="user-email">
                 Signed in as <%= current_user.email %>
@@ -50,6 +54,7 @@
                 </div>
               </div>
             <% end %>
+          </ul>
       </div>
     </nav>
 
@@ -61,5 +66,15 @@
     <% end %>
 
     <%= yield %>
+  </div>
+
+    <div id="footer">
+      <div class="container">
+        <b>Footer Here</b>
+        <br />
+        <%= link_to 'Link', '#' %>
+      </div>
+    </div>
+
   </body>
 </html>
