@@ -1,0 +1,11 @@
+<div class="new-box mx-auto">
+	<h1>Add a new guide!</h1>
+	<%= simple_form_for @guide, url: instructor_guides_path do |f| %>
+		<%= f.input :title %>
+		<%= f.input :description %>
+		<%= f.input :cost %>
+		<br />
+		<%= f.submit "Create", class: "btn btn-primary" %>
+		<br />
+		<% end %>
+</div>
