@@ -66,19 +66,38 @@ font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill
   overflow: hidden;
   width: 1000px;
   max-width: 80%;
-  }
-  .user-email {
-    color: grey;
-    font-size: 1.3em;
-    margin: auto 20px auto 0px;
-  }
-  .icons {
-    height: 175px;
-    width: 175px;
-  }
+}
+.user-email {
+  color: grey;
+  font-size: 1.3em;
+  margin: auto 20px auto 0px;
+}
+.icons {
+  height: 175px;
+  width: 175px;
+}
 .help-block {
-  color: #ff3333;
-  background-color: #FFEEEE;
-  border-radius: 3px;
-  padding: 2px 8px 2px 8px;
+color: #ff3333;
+background-color: #FFEEEE;
+border-radius: 3px;
+padding: 2px 8px 2px 8px;
+}
+.login-dropdown {
+  width: 100%;
+  border-radius: 0;
+  border-style: none;
+  background-color: white;
+  color: black;
+
+}
+.top-login {
+  margin-bottom: 5px;
+}
+.dropdown-menu {
+  background-color: #413c3d;
+}
+.stdnt-btn {
+  display: inline;
+  position: absolute;
+  margin: 15px 0px 0px 15px;
 }

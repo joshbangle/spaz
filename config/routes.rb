@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root 'static_pages#index'
   resources :guides, only: [:index, :show]
   namespace :instructor do
-  	resources :guides, only: [:new, :create, :show]
+  	resources :guides, only: [:new, :create, :show] do
+      resources :sections, only: [:new, :create]
+    end
   end
 end
