@@ -1,18 +1,19 @@
 <br />
 	<h1 class="text-center">Become a camping pro!</h1>
+	<br />
 	<% if @guides.present? %>
 <div class="new-box mx-auto">
-	<% @guides.each do |guide| %>
-			<h2><%= guide.title %></h2>
-			<div class="row">
-				<div class="col-sm-8 col-12">
-					<%= guide.description %>
+		<% @guides.each do |guide| %>
+				<h2><%= link_to guide.title, guide_path(guide) %></h2>
+				<div class="row">
+					<div class="col-sm-8 col-12">
+						<%= guide.description %>
+					</div>
+					<div class="col-sm-4 col-12 text-center">
+						<%= link_to "Details", guide_path(guide), class: "btn btn-primary" %>
+					</div>
 				</div>
-				<div class="col-sm-4 col-12 text-center">
-					<%= link_to "Button", '#', class: "btn btn-primary" %>
-				</div>
-			</div>
-			<br />
-	<% end %>
+				<br />
+		<% end %>
 	<% end %>
 </div>
