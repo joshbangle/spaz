@@ -1,6 +1,6 @@
 <%= link_to 'Preview as Student', guide_path(@guide), class: 'btn btn-warning btn-lg stdnt-btn' %>
-<div class="new-box mx-auto">
-	<h1 class="text-center"><%= @guide.title %></h1>
+<div class="new-box mx-auto text-center">
+	<h1><%= @guide.title %></h1>
 	<h4><%= @guide.description %></h4>
  
 </div> 
@@ -8,7 +8,21 @@
 
 
   <% @guide.sections.each do |section| %>
-    <div class="new-box text-center mx-auto"><%= section.title %></div>
+    <div class="new-box text-center mx-auto">
+      <ul>
+        <li>
+          <h3><%= section.title %></h3>
+        </li>
+      </ul>
+        <% section.lessons.each_with_index do |lesson, position| %>
+        <b>Lesson <%= position+1 %>: <%= lesson.title %></b>
+        -
+        <%= lesson.subtitle %>
+      <% end %>
+      <br />
+      <br />
+      <%= link_to "New Lesson", new_instructor_section_lesson_path(section), class: 'btn btn-primary' %>
+    </div>
   <% end %>
 <br />
 
