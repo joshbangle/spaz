@@ -4,7 +4,14 @@
 	<h4><%= @guide.description %></h4>
  
 </div> 
+
+
+
+  <% @guide.sections.each do |section| %>
+    <div class="new-box text-center mx-auto"><%= section.title %></div>
+  <% end %>
 <br />
+
 <div class="text-center">
   <%= link_to "Add a new section", new_instructor_guide_section_path(@guide), class: 'btn btn-primary btn-lg' %>
 
