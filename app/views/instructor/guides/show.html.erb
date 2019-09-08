@@ -1,4 +1,5 @@
 <%= link_to 'Preview as Student', guide_path(@guide), class: 'btn btn-warning btn-lg stdnt-btn' %>
+<br />
 <div class="new-box mx-auto text-center">
 	<h1><%= @guide.title %></h1>
 	<h4><%= @guide.description %></h4>
@@ -15,11 +16,15 @@
         </li>
       </ul>
         <% section.lessons.each_with_index do |lesson, position| %>
-        <b>Lesson <%= position+1 %>: <%= lesson.title %></b>
-        -
-        <%= lesson.subtitle %>
+        <ul>
+          <li>
+            <b>Lesson <%= position+1 %>: <%= lesson.title %></b>
+            -
+            <%= lesson.subtitle %>
+          </li>
+        </ul>
       <% end %>
-      <br />
+
       <br />
       <%= link_to "New Lesson", new_instructor_section_lesson_path(section), class: 'btn btn-primary' %>
     </div>
