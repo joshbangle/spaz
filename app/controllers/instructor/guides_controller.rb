@@ -7,11 +7,11 @@ class Instructor::GuidesController < ApplicationController
 
 	def create
 		@guide = current_user.guides.create(guide_params)
-		if @guide.valid?
+		# if @guide.valid?
 			redirect_to instructor_guide_path(@guide)
-		else
-			render :new, status: :unprocessable_entity
-		end
+		# else
+		# 	render :new, status: :unprocessable_entity
+		# end
 	end
 
 	def show
@@ -32,7 +32,7 @@ class Instructor::GuidesController < ApplicationController
 	end
 
 	def guide_params
-		params.required(:guide).permit(:title, :description, :cost)
+		params.required(:guide).permit(:title, :description, :cost, :image)
 	end
 
 end

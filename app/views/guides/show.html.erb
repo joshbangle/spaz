@@ -7,7 +7,9 @@
   <% end %>
 
   <h1 class= "text-center"><%= @guide.title %></h1>
-
+  <% if @guide.image.present? %>
+  <%= image_tag @guide.image, class: 'img-fluid' %>
+  <% end %>
   <div class="row">
 
     <div class="col-sm-2 col-12">
