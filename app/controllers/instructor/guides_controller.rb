@@ -1,6 +1,6 @@
 class Instructor::GuidesController < ApplicationController
 	before_action :authenticate_user!
-
+	before_action :require_authorized_for_current_guide, only: [:show]
 	def new
 		@guide = Guide.new
 	end
@@ -15,13 +15,24 @@ class Instructor::GuidesController < ApplicationController
 	end
 
 	def show
-		@guide = Guide.find(params[:id])
 	end
 
 
 	private
 
+	def require_authorized_for_current_guide
+		if current_guide.user != current_user
+			render plain: "Unauthorized", status: :unauthorized
+		end
+	end
+
+	helper_method :current_guide
+	def current_guide
+		@current_guide ||= Guide.find(params[:id])
+	end
+
 	def guide_params
 		params.required(:guide).permit(:title, :description, :cost)
 	end
+
 end

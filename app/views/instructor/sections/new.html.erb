@@ -1,6 +1,6 @@
 <div class="new-box mx-auto">
   <h1 class="text-center">New Sections</h1>
-  <%= simple_form_for @section, url: instructor_guide_sections_path(@guide) do |f| %>
+  <%= simple_form_for @section, url: instructor_guide_sections_path(current_guide) do |f| %>
     <%= f.input :title %>
     <br />
     <%= f.submit "Add Section", class: 'btn btn-primary' %>

@@ -1,14 +1,14 @@
-<%= link_to 'Preview as Student', guide_path(@guide), class: 'btn btn-warning btn-lg stdnt-btn' %>
+<%= link_to 'Preview as Student', guide_path(current_guide), class: 'btn btn-warning btn-lg stdnt-btn' %>
 <br />
 <div class="new-box mx-auto text-center">
-	<h1><%= @guide.title %></h1>
-	<h4><%= @guide.description %></h4>
+	<h1><%= current_guide.title %></h1>
+	<h4><%= current_guide.description %></h4>
  
 </div> 
 
 
 
-  <% @guide.sections.each do |section| %>
+  <% current_guide.sections.each do |section| %>
     <div class="new-box text-center mx-auto">
       <ul>
         <li>
@@ -32,6 +32,6 @@
 <br />
 
 <div class="text-center">
-  <%= link_to "Add a new section", new_instructor_guide_section_path(@guide), class: 'btn btn-primary btn-lg' %>
+  <%= link_to "Add a new section", new_instructor_guide_section_path(current_guide), class: 'btn btn-primary btn-lg' %>
 
 </div>
