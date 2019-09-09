@@ -3,7 +3,7 @@
 <div class="new-box mx-auto text-center">
 	<h1><%= current_guide.title %></h1>
   <% if current_guide.image.present? %>
-    <%= image_tag current_guide.image, class: 'img-fluid' %>
+    <%= image_tag current_guide.image.url, class: 'img-fluid' %>
   <% end %>
 	<h4><%= current_guide.description %></h4>
  
