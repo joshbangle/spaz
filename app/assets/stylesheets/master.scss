@@ -104,3 +104,27 @@ padding: 2px 8px 2px 8px;
 .lesson-submit {
   margin: 0 50% 0 50%;
 }
+.section {
+  border: 1px solid;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 20px;
+}
+.lesson {
+  background-color: black;
+  margin-top: 10px;
+  height: 130px;
+  flex: 0 0 48%;
+}
+.lesson a {
+  color: white;
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 100;
+  font-size: 15px;
+}
+.lesson a b {
+  font-weight: 100;
+  font-size: 25px;
+}
+hr {
+  background-color: grey;
+}
