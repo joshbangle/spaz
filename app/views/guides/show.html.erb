@@ -51,7 +51,7 @@
         <%= section.title %>
       </h3>
       <div class="row d-flex justify-content-between">
-        <% section.lessons.each do |lesson| %>
+        <% section.lessons.rank(:row_order).each do |lesson| %>
 <!--           <div class=""> -->
             <div class="lesson text-center col-sm-6 col-12">
               <%= link_to lesson_path(lesson) do %>

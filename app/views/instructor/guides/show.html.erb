@@ -18,7 +18,7 @@
           <h3><%= section.title %></h3>
         </li>
       </ul>
-        <% section.lessons.each_with_index do |lesson, position| %>
+        <% section.lessons.rank(:row_order).each_with_index do |lesson, position| %>
         <ul>
           <li>
             <b>Lesson <%= position+1 %>: <%= lesson.title %></b>
