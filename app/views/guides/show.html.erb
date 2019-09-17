@@ -19,12 +19,28 @@
     <div class="col-sm-10 col-12">
       <h4><%= @guide.description %></h4>
     </div>
-    <% if current_user && current_user.enrolled_in?(@guide) %>
-      <h3 class="badge badge-info">Enrolled!</h3>
-    <% else %>
-      <%= link_to 'Enroll', guide_enrollments_path(@guide), class: 'btn btn-primary', method: :post %>
-    <% end %>
+    <% if current_user %>
+      <% if current_user.enrolled_in?(@guide) %>
+        <h3 class="badge badge-info">Enrolled!</h3>
+      <% else %>
+        <% if @guide.free? %>
+        <%= link_to 'Enroll', guide_enrollments_path(@guide), class: 'btn btn-primary', method: :post %>
+        <% else %>
+          <%= form_tag guide_enrollments_path(@guide) do %> <!-- Stripe Payment html -->
+     
 
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-email="<%= current_user.email %>"
+                      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                      data-description="<%= @guide.title %> (<%= number_to_currency @guide.cost %>)"
+                      data-amount="<%= (@guide.cost * 100).to_i %>"
+                      data-locale="auto"></script>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% else %>
+      <h3 class="badge badge-info">Sign in to enroll!</h3>
+    <% end %>
 
 </div>  
 <div class="col-12">
