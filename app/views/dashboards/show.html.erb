@@ -1,0 +1,54 @@
+<br />
+  
+<div class="new-box mx-auto">
+  <h1 class="text-center">Guides I follow</h1>
+  <% current_user.enrolled_guides.each do |guide| %>
+  <br />
+    <h3>
+      <%= link_to guide.title, guide_path(guide) %>
+    </h3>
+    
+    <% if guide.image.present? %>
+      <div class="text-center">
+        <%= image_tag guide.image.url, class: 'img-fluid mx-auto' %>
+      </div>
+      <br />
+    <% end %>
+    
+    <div class="row">
+      <div class="col-sm-8 col-12">
+        <%= guide.description %>
+      </div>
+      <div class="col-sm-4 col-12 text-center">
+        <%= link_to "More info", guide_path(guide), class: 'btn btn-lg btn-primary' %>
+      </div>
+    </div>
+    <br />
+    <hr>
+  <% end %>
+</div>
+<div class="new-box mx-auto">
+  <h1>What I'm Teaching</h1>
+  <% current_user.guides.each do |guide| %>
+    <h3 class="text-center">
+      <%= link_to guide.title, guide_path(guide) %>
+    </h3>
+        <% if guide.image.present? %>
+      <div class="text-center">
+        <%= image_tag guide.image.url, class: 'img-fluid mx-auto' %>
+      </div>
+      <br />
+    <% end %>
+    
+    <div class="row">
+      <div class="col-sm-8 col-12">
+        <%= guide.description %>
+      </div>
+      <div class="col-sm-4 col-12 text-center">
+        <%= link_to "More info", guide_path(guide), class: 'btn btn-lg btn-primary' %>
+      </div>
+    </div>
+    <br />
+    <hr>
+  <% end %>
+  </div>
