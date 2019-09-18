@@ -1,9 +1,0 @@
-<div class="new-box mx-auto">
-  <h1 class="text-center">Add a new lesson</h1>
-  <%= simple_form_for @lesson, url: instructor_section_lessons_path(current_section) do |f| %>
-    <%= f.input :title %>
-    <%= f.input :subtitle %>
-    <%= f.input :video %>
-    <div class="text-center"><%= f.submit "Add lesson", class: 'btn btn-primary' %></div>
-  <% end %>
-</div>
