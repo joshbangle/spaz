@@ -1,3 +1,24 @@
+<script>
+
+  $(function() {
+    $('.lessons').sortable({
+      update: function( event, ui ) {
+       $.ajax({
+        type: 'PUT',
+        url: ui.item.data('update-url'),
+        dataType: 'json',
+        data: { lesson: { row_order_position: ui.item.index() } }
+       });
+      }
+    });
+  });
+
+
+
+
+</script>
+
+
 <%= link_to 'Preview as Student', guide_path(current_guide), class: 'btn btn-warning btn-lg stdnt-btn' %>
 <br />
 <div class="new-box mx-auto text-center">
@@ -18,16 +39,17 @@
           <h3><%= section.title %></h3>
         </li>
       </ul>
+      <ul class='lessons'> 
         <% section.lessons.rank(:row_order).each_with_index do |lesson, position| %>
-        <ul>
-          <li>
+        
+          <li data-update-url="<%= instructor_lesson_path(lesson) %>">
             <b>Lesson <%= position+1 %>: <%= lesson.title %></b>
             -
             <%= lesson.subtitle %>
           </li>
-        </ul>
-      <% end %>
-
+        
+        <% end %>
+      </ul>
       <br />
       <%= link_to "New Lesson", new_instructor_section_lesson_path(section), class: 'btn btn-primary' %>
     </div>
