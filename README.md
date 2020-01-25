@@ -1,24 +1,16 @@
-# README
+# Spaz
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Video hosting website demo using AWS for video storage, Devise user authentication, and Stripe for secure payments
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+### Prerequisites
 
-* System dependencies
+In order to run this on your local setup, you will need:
+- Git
+- Ruby 2.5.3 or greater
+- Rails 5.2.3 or greater
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Installing
+- Clone the repository from the Github Page 
+![clone button pic](./readme_images/spaz_clone.png "Clone Button")
