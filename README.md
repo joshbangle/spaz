@@ -32,5 +32,14 @@ bundle install
 rails db:setup
 rails db:migrate
 ```
+
+## Built With
+
+* [Ruby](https://www.ruby-lang.org/en/documentation/installation/) on the [Rails](https://gorails.com/setup/) framework
+* [Bootstrap](https://getbootstrap.com/) css framework for styling
+* [Devise](https://github.com/heartcombo/devise) user authentication
+* [AWS](https://aws.amazon.com/) for cloud storage
+* [Stripe](https://stripe.com/) for secure online payments
+
 ## Usage
 Please feel free to use this code without permission or need to contact me.   
