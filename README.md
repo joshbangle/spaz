@@ -1,16 +1,36 @@
 # Spaz
 
-Video hosting website demo using AWS for video storage, Devise user authentication, and Stripe for secure payments
+[![forthebadge](https://forthebadge.com/images/badges/made-with-ruby.svg)](https://forthebadge.com)
+
+  ## Focuses
+  * AWS video and image storage
+  * User authentication with Devise
+  * Secure payments using Stripe
+  * Simple splash page design with bootstrap
+
+Live demo [can be found here](https://spaz-josh-bangle.herokuapp.com/) on Heroku.
+
+* Username: test1@test.<span></span>com
+* Password: password
+* Info for testing Stripe payment [can be found here](https://stripe.com/docs/testing).
 
 ## Getting Started
 
 ### Prerequisites
 
-In order to run this on your local setup, you will need:
-- Git
-- Ruby 2.5.3 or greater
-- Rails 5.2.3 or greater
+This setup expects [Git](https://git-scm.com/downloads), [Ruby v 2.5.3](https://www.ruby-lang.org/en/documentation/installation/), and [Rails](https://gorails.com/setup/) to be installed. [PostgreSQL](https://www.postgresql.org/download/) is used for the database.
 
-### Installing
-- Clone the repository from the Github Page 
-![clone button pic](./readme_images/spaz_clone.png "Clone Button")
+If you prefer not to worry about the Ruby version, you can navigate to spaz/Gemfile and on line 4 comment out `ruby '2.5.3'` to look like `# ruby '2.5.3` once you have cloned the repository.
+
+### Installing the code
+
+To view this code on your local machine, clone the repository, install the included gems, and migrate the database:
+```
+git clone git@github.com:joshbangle/spaz.git
+cd spaz
+bundle install
+rails db:setup
+rails db:migrate
+```
+## Usage
+Please feel free to use this code without permission or need to contact me.   
