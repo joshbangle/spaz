@@ -30,7 +30,6 @@ git clone git@github.com:joshbangle/spaz.git
 cd spaz
 bundle install
 rails db:setup
-rails db:migrate
 ```
 
 ## Built With
