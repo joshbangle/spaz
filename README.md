@@ -2,7 +2,7 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-ruby.svg)](https://forthebadge.com)
 
-![test](app/readme_images/spaz.png)
+![test](app/readmeImages/spaz.png)
 
   ## Focuses
   * AWS video and image storage
